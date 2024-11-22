@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Practicum.iml" filepath="$PROJECT_DIR$/.idea/Practicum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/project/project.iml" filepath="$PROJECT_DIR$/project/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practicum.iml" filepath="$PROJECT_DIR$/Practicum.iml" />
     </modules>
   </component>
 </project>
