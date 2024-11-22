@@ -10,7 +10,7 @@ public class Voetbalclub {
     public Voetbalclub(String naam) {
 
         if (naam == null || naam.isEmpty()) {
-             this.naam = "FC";
+            this.naam = "FC";
         } else {
             this.naam = naam;
         }
@@ -28,6 +28,8 @@ public class Voetbalclub {
             aantalGelijk = aantalGelijk + 1;
         if (ch == 'v')
             aantalVerloren = aantalVerloren + 1;
+            else
+            throw new IllegalArgumentException("Ongeldige invoer " + ch);
     }
 
     public int aantalPunten() {

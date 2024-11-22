@@ -20,6 +20,12 @@ class VoetbalclubTest {
     }
 
     @Test
+    void test_verwerkingResultaatRandomChar() {
+        Voetbalclub Club = new Voetbalclub("Ajax");
+        assertThrows(IllegalArgumentException.class, () -> Club.verwerkResultaat('x'));
+    }
+
+    @Test
     void test_verwerkingResultaatWin() {
         Voetbalclub Club = new Voetbalclub("Ajax");
         Club.verwerkResultaat('w');
@@ -29,17 +35,18 @@ class VoetbalclubTest {
         assertEquals(0, Club.getAantalVerloren());
         assertEquals(3, Club.aantalPunten());
     }
+
     @Test
     void test_verwerkingResultaatGelijk() {
 
-    Voetbalclub Club = new Voetbalclub("Fynoord");
-    Club.verwerkResultaat('g');
+        Voetbalclub Club = new Voetbalclub("Fynoord");
+        Club.verwerkResultaat('g');
 
-    assertEquals(1, Club.aantalGespeeld());
-    assertEquals(0, Club.getAantalGewonnen());
-    assertEquals(1, Club.getAantalGelijk());
-    assertEquals(0, Club.getAantalVerloren());
-    assertEquals(1, Club.aantalPunten());
+        assertEquals(1, Club.aantalGespeeld());
+        assertEquals(0, Club.getAantalGewonnen());
+        assertEquals(1, Club.getAantalGelijk());
+        assertEquals(0, Club.getAantalVerloren());
+        assertEquals(1, Club.aantalPunten());
     }
 
     @Test
@@ -54,14 +61,15 @@ class VoetbalclubTest {
         assertEquals(1, Club.getAantalVerloren());
         assertEquals(0, Club.aantalPunten());
     }
+
     @Test
     void test_ToString() {
-    Voetbalclub Club = new Voetbalclub("Ajax");
-    Club.verwerkResultaat('w');
-    Club.verwerkResultaat('g');
-    Club.verwerkResultaat('v');
+        Voetbalclub Club = new Voetbalclub("Ajax");
+        Club.verwerkResultaat('w');
+        Club.verwerkResultaat('g');
+        Club.verwerkResultaat('v');
 
-    String expectedResult = "Ajax   3   1   1   1   4";
-    assertEquals(expectedResult, Club.toString());
+        String expectedResult = "Ajax   3   1   1   1   4";
+        assertEquals(expectedResult, Club.toString());
     }
 }
