@@ -8,10 +8,11 @@ public class Voetbalclub {
     private int aantalVerloren;
 
     public Voetbalclub(String naam) {
-        this.naam = naam;
-        this.aantalGewonnen = 0;
-        this.aantalGelijk = 0;
-        this.aantalVerloren = 0;
+        if (naam == null || naam.isEmpty()) {
+            this.naam = "FC";
+        } else {
+            this.naam = naam;
+        }
     }
 
     public String getNaam() {
@@ -30,10 +31,12 @@ public class Voetbalclub {
 
         if (ch == 'w')
             aantalGewonnen = aantalGewonnen + 1;
-        if (ch == 'g')
+        else if (ch == 'g')
             aantalGelijk = aantalGelijk + 1;
-        if (ch == 'v')
+        else if (ch == 'v')
             aantalVerloren = aantalVerloren + 1;
+        else
+            throw new IllegalArgumentException("Ongeldige invoer " + ch);
     }
 
     @Override
