@@ -8,16 +8,22 @@ public class Voetbalclub {
     private int aantalVerloren;
 
     public Voetbalclub(String naam) {
-
-        if (naam == null || naam.isEmpty()) {
-            this.naam = "FC";
-        } else {
-            this.naam = naam;
-        }
-
+        this.naam = naam;
+        this.aantalGewonnen = 0;
+        this.aantalGelijk = 0;
+        this.aantalVerloren = 0;
     }
+
     public String getNaam() {
         return naam;
+    }
+
+    public int aantalGespeeld() {
+        return aantalGelijk + aantalGewonnen + aantalVerloren;
+    }
+
+    public int aantalPunten() {
+        return (aantalGewonnen * 3) + aantalGelijk;
     }
 
     public void verwerkResultaat(char ch) {
@@ -28,30 +34,7 @@ public class Voetbalclub {
             aantalGelijk = aantalGelijk + 1;
         if (ch == 'v')
             aantalVerloren = aantalVerloren + 1;
-            else
-            throw new IllegalArgumentException("Ongeldige invoer " + ch);
     }
-
-    public int aantalPunten() {
-        return (aantalGewonnen * 3) + aantalGelijk;
-    }
-
-    public int getAantalGelijk() {
-        return aantalGelijk;
-    }
-
-    public int getAantalVerloren() {
-        return aantalVerloren;
-    }
-
-    public int getAantalGewonnen() {
-        return aantalGewonnen;
-    }
-
-    public int aantalGespeeld() {
-        return aantalGelijk + aantalGewonnen + aantalVerloren;
-    }
-
 
     @Override
     public String toString() {

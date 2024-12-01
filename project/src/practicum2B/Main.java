@@ -2,7 +2,7 @@ package practicum2B;
 
 public class Main {
     public static void main(String[] args) {
-        Voetbalclub ajx = new Voetbalclub("Ajax");
+        Voetbalclub ajx = new Voetbalclub("Ajax      ");
         Voetbalclub feij = new Voetbalclub("Feijenoord");
 
         feij.verwerkResultaat('w');
