@@ -11,26 +11,24 @@ public class AutoHuur {
         this.huurder = null;
     }
 
-
-    public void setAantalDagen(int aantalDagen) {
-        this.aantalDagen = aantalDagen;
+    public void setAantalDagen(int aD) {
+        this.aantalDagen = aD;
     }
 
     public int getAantalDagen() {
         return aantalDagen;
     }
 
-    public void setGehuurdeAuto(Auto gehuurdeAuto) {
-        this.gehuurdeAuto = gehuurdeAuto;
+    public void setGehuurdeAuto(Auto gA) {
+        this.gehuurdeAuto = gA;
     }
 
     public Auto getGehuurdeAuto() {
         return gehuurdeAuto;
     }
 
-
-    public void setHuurder(Klant huurder) {
-        this.huurder = huurder;
+    public void setHuurder(Klant k) {
+        this.huurder = k;
     }
 
     public Klant getHuurder() {
