@@ -5,6 +5,12 @@ public class Zwembad {
     private double lengte = 2.5;
     private double diepte = 2.5;
 
+    public Zwembad() {
+        this.breedte = 0.0;
+        this.lengte = 0.0;
+        this.diepte = 0.0;
+    }
+
     public Zwembad(double breedte, double lengte, double diepte) {
         this.breedte = breedte;
         this.lengte = lengte;
@@ -35,12 +41,14 @@ public class Zwembad {
         this.diepte = diepte;
     }
 
+    public double inhoud() {
+        return breedte * lengte * diepte;
+    }
+
     @Override
     public String toString() {
         return "Dit zwembad is " + breedte + " breed, " + lengte + " meter lang, " + diepte + " meter diep";
     }
 
-    public double inhoud() {
-    return breedte * lengte * diepte;
-    }
+
 }
