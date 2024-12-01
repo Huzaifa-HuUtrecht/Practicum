@@ -18,8 +18,6 @@ public class Huis {
         return huisbaas;
     }
 
-
-
     @Override
     public String toString() {
         return "Huis " + adres + " is gebouwd in " + bouwjaar + "\nen heeft huisbaas " + huisbaas.toString();
