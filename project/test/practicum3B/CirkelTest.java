@@ -10,7 +10,7 @@ class CirkelTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             new Cirkel(-1, 0, 0);
         });
-        assertEquals("Radius must be a positive integer", exception.getMessage());
+        assertEquals("Radius moet groter dan 0 zijn!", exception.getMessage());
     }
 
     @Test
@@ -18,7 +18,7 @@ class CirkelTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             new Cirkel(0, 10, 10);
         });
-        assertEquals("Radius must be a positive integer", exception.getMessage());
+        assertEquals("Radius moet groter dan 0 zijn!", exception.getMessage());
     }
 
     @Test
