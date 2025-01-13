@@ -22,6 +22,6 @@ public class Auto extends Voertuig {
         if (!super.equals(obj)) return false;
 
         Auto auto = (Auto) obj;
-        return kenteken.equals(auto.kenteken);
+        return this.kenteken.equals(auto.kenteken);
     }
 }

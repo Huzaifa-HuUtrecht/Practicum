@@ -13,15 +13,15 @@ public abstract class Voertuig implements Goed {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Voertuig) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
+        if (this == obj) return true;
+
+        if (obj == null || getClass() != obj.getClass()) return false;
 
         Voertuig voertuig = (Voertuig) obj;
-        return type.equals(voertuig.type) && bouwjaar == voertuig.bouwjaar;
+
+        return this.type.equals(voertuig.type) &&
+                this.nieuwprijs == voertuig.nieuwprijs &&
+                this.bouwjaar == voertuig.bouwjaar;
     }
 
     @Override

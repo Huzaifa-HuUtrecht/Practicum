@@ -25,11 +25,14 @@ public class Computer implements Goed {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Computer computer = (Computer) obj;
-        return macAdres.equals(computer.macAdres);
+        return macAdres.equals(computer.macAdres) &&
+                this.type.equals(computer.type) &&
+                this.aanschafPrijs == computer.aanschafPrijs &&
+                this.productieJaar == computer.productieJaar;
     }
 
     @Override
     public String toString() {
-        return String.format("Computer: %s heeft een waarde van: €%.2f", type, huidigeWaarde());
+        return String.format("Computer: %s heeft een waarde van: %s", type, Utils.euroBedrag(huidigeWaarde()));
     }
 }
