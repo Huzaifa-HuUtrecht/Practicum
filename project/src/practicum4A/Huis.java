@@ -11,11 +11,10 @@ public class Huis {
     }
 
     public void setHuisbaas(Persoon hb) {
-        this.huisbaas = hb;
     }
 
-    public Persoon getHuisbaas() {
-        return huisbaas;
+    public Persoon getHuisbaas(){
+    return this.huisbaas;
     }
 
     @Override
