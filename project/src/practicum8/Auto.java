@@ -7,7 +7,7 @@ public class Auto extends Voertuig {
         super(tp, pr, jr);
         this.kenteken = kt;
     }
-
+//test merge request
     @Override
     public double huidigeWaarde() {
         int huidigeJaar = java.time.Year.now().getValue();
