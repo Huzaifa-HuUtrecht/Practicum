@@ -10,7 +10,6 @@ public class BedrijfsInventaris {
     public BedrijfsInventaris(String nm, double bud) {
         this.bedrijfsnaam = nm;
         this.budget = bud;
-        this.alleGoederen = new ArrayList<>();
     }
 
     public void schafAan(Goed g) {
@@ -21,7 +20,7 @@ public class BedrijfsInventaris {
             System.out.println("Aanschaf mislukt: onvoldoende budget of goed al aanwezig.");
         }
     }
-
+//hier voeg ik ook aanpassingen
     public String toString() {
         StringBuilder sb = new StringBuilder("Invantaris:\n");
 
